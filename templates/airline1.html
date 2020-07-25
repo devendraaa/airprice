@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>AIRLINE PRICE PREDICTIONS</h1>
+            <span class="subheading">A Blog Liked By Data Science</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <form action="airline" method="post">
+      <div class="row">
+        <div class='col-sm-6'>
+          <div class="shadow-lg p-4 mb-4 bg-white">
+          <div class="card">
+            <div class="card-body">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                  <h5 class="card-title">Depature Date</h5>
+                    <!-- <input type='text' class="form-control" /> -->
+                    <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                    <!-- <span class="input-group-addon"> -->
+                        <!-- <span class="glyphicon glyphicon-calendar"></span> -->
+                    <!-- </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+        </div>
+         <div class='col-sm-6'>
+          <div class="shadow-lg p-4 mb-4 bg-white">
+          <div class="card">
+            <div class="card-body">
+            <div class="form-group">
+              <h5 class="card-title">Arrival Date</h5>
+                <div class='input-group date' id='datetimepicker1'>
+                  
+                  
+                    <!-- <input type='text' class="form-control" /> -->
+                    <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                    <!-- <span class="input-group-addon"> -->
+                        <!-- <span class="glyphicon glyphicon-calendar"></span> -->
+                    <!-- </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="shadow-lg p-4 mb-4 bg-white">
+            <div class="card">
+            <div class="card-body">
+                    <h4>Source</h4>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+
+            <select class="custom-select" id="Source" name="Source">
+              <option selected>Choose...</option>
+              <option value="Cochin">Delhi</option>
+              <option value="Delhi">Kolkata</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Hydrabad">Chennai</option>
+            </select>
+            </div>
+             </div>
+           </div>
+        </div>
+      </div>
+
+        <div class="col-sm-6">
+          <div class="shadow-lg p-4 mb-4 bg-white">
+            <div class="card">
+            <div class="card-body">
+                    <h4>Destination</h4>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+
+            <select class="custom-select" id="Destination" name="Destination">
+              <option selected>Choose...</option>
+              <option value="Cochin">Cochin</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Hydrabad">Hydrabad</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Banglore">Banglore</option>
+            </select>
+            </div>
+             </div>
+           </div>
+        </div>
+      </div>
+      </div>
+
+    <br>
+    <br>
+
+    <div class="row">
+      
+        <div class="col-sm-6">
+          <div class="shadow-lg p-4 mb-4 bg-white">
+            <div class="card">
+            <div class="card-body">
+                    <h4>Source</h4>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+
+                       <select class="custom-select mr-sm-2" id="stops" name="stops">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+            </div>
+             </div>
+           </div>
+        </div>
+      </div>
+
+        <div class="col-sm-6">
+          <div class="shadow-lg p-4 mb-4 bg-white">
+            <div class="card">
+            <div class="card-body">
+                    <h4>Which Airline you want to travel?</h4>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+
+            <select class="custom-select" name="airline" id="airline" required="required">
+                     
+                                <option value="Jet Airways">Jet Airways</option>
+                                <option value="IndiGo">IndiGo</option>
+                                <option value="Air India">Air India</option>
+                                <option value="Multiple carriers">Multiple carriers</option>
+                                <option value="SpiceJet">SpiceJet</option>
+                                <option value="Vistara">Vistara</option>
+                                <option value="Air Asia">Air Asia</option>
+                                <option value="GoAir">GoAir</option>
+                                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+                                </option>
+                                <option value="Jet Airways Business">Jet Airways Business</option>
+                                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                                <option value="Trujet">Trujet</option>
+                            </select>
+            </div>
+             </div>
+           </div>
+        </div>
+      </div>
+      </div>
+     <br>
+<!-- </div> -->
+     <!-- <input type="submit" value="Submit" class="btn btn-secondary"> -->
+     
+      <button type="submit" value="Submit" class="btn btn-primary btn-block">SUBMIT</button>
+ </div>
+
+     <br>
+     
+            
+                      <!-- <div class="shadow-lg p-4 mb-4 bg-white"> -->
+                        <h3><center> {{ prediction_text }}</center></h3>
+         
+
+
+
+      <br>
+    <div class="container">
+       <div class="row justify-content-md-center">
+      <div class="col-sm-8">
+           <p><center>©2020 Devendra chavan</center> </p>
+                   
+        
+            </div>
+        </div> 
+    </div>
+        
+        <!-- <div class="shadow-lg p-4 mb-4 bg-white">Devendra Chavan</div> -->
+
+    </form>
+
+
+
+  </div>
+
+ 
+
+{% endblock %}
+
+
